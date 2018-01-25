@@ -1,3 +1,1 @@
 # indicator-library
-
-## KPI
