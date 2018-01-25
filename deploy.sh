@@ -1,3 +1,5 @@
+cd “$( dirname “${BASH_SOURCE[0]}” )”
+
 git pull -r
 
 sudo /usr/local/bin/docker-compose stop
