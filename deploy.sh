@@ -1,3 +1,3 @@
 git pull -r
 
-docker-compose run web django-admin.py startproject composeexample .
+sudo docker-compose run web django-admin.py startproject composeexample .
