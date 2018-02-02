@@ -1,6 +1,6 @@
 from django.contrib.auth.models import User, Group
 from rest_framework import serializers
-from .models import Indicator, Source, Frequency
+from .models import Indicator, Source, Frequency, AdditionalFields
 
 
 class UserSerializer(serializers.HyperlinkedModelSerializer):
@@ -39,6 +39,15 @@ class FrequencySerializer(serializers.HyperlinkedModelSerializer):
 
     class Meta:
         model = Frequency
+        fields='__all__'
+
+class AdditionalFieldsSerializer(serializers.HyperlinkedModelSerializer):
+    additional_fields_key = serializers.UUIDField(read_only=True)
+    id = serializers.ReadOnlyField()
+    actuals = serializers.ReadOnlyField()
+
+    class Meta:
+        model = AdditionalFields
         fields='__all__'
 
 

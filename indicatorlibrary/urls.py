@@ -23,6 +23,7 @@ router.register(r'groups', views.GroupViewSet)
 router.register(r'indicator', views.IndicatorViewSet)
 router.register(r'source', views.SourceViewSet)
 router.register(r'frequency',views.FrequencyViewSet)
+router.register(r'additional_fields', views.AdditionalFieldsViewSet)
 
 # Wire up our API using automatic URL routing.
 # Additionally, we include login URLs for the browsable API.

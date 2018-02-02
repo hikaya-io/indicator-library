@@ -21,21 +21,28 @@ class GroupViewSet(viewsets.ModelViewSet):
 
 class FrequencyViewSet(viewsets.ModelViewSet):
     """
-    API endpoint that allows groups to be viewed or edited.
+    API endpoint that allows frequency to be viewed or edited.
     """
     queryset = Frequency.objects.all()
     serializer_class = FrequencySerializer
 
 class SourceViewSet(viewsets.ModelViewSet):
     """
-    API endpoint that allows groups to be viewed or edited.
+    API endpoint that allows source to be viewed or edited.
     """
     queryset = Source.objects.all()
     serializer_class = SourceSerializer
 
 class IndicatorViewSet(viewsets.ModelViewSet):
     """
-    API endpoint that allows groups to be viewed or edited.
+    API endpoint that allows indicators to be viewed or edited.
     """
     queryset = Indicator.objects.all()
     serializer_class = IndicatorSerializer
+
+class AdditionalFieldsViewSet(viewsets.ModelViewSet):
+    """
+    API endpoint that allows additional fields to be viewed or edited.
+    """
+    queryset = AdditionalFields.objects.all()
+    serializer_class = AdditionalFieldsSerializer

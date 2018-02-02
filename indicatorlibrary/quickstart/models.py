@@ -1,4 +1,5 @@
 from django.db import models
+from django.contrib.postgres.fields import JSONField, ArrayField
 import uuid
 
 # Create your models here.    created_by = models.ForeignKey('auth.User', related_name='indicators', null=True, blank=True, on_delete=models.SET_NULL)
@@ -11,12 +12,18 @@ class Frequency(models.Model):
     frequency_uuid = models.CharField(max_length=255, verbose_name='Frequency UUID', default=uuid.uuid4, unique=True, blank=True)
     frequency = models.CharField(max_length=255, blank=False)
 
+class AdditionalFields(models.Model):
+    additional_fields_uuid = models.CharField(max_length=255, verbose_name="Additional Field UUID", default=uuid.uuid4, unique=True, blank=True)
+    additional_fields = JSONField()
+
 class Indicator(models.Model):
     indicator_uuid = models.CharField(max_length=255,verbose_name='Indicator UUID', default=uuid.uuid4, unique=True, blank=True)
     level = models.CharField(max_length = 255, blank=True)
     objectives = models.CharField(max_length=255, blank=True,verbose_name="Objective")
     name = models.CharField(max_length=255, null=False)
     data_source = models.ForeignKey(Source, null=True, blank=True)
+    additional_fields = models.ForeignKey(AdditionalFields, null=True, blank=True)
+    tags = ArrayField(models.CharField(max_length=10, null=True, blank=True), size=8, null=True, blank=True)
     number = models.CharField(max_length=255, null=True, blank=True)
     source = models.CharField(max_length=255, null=True, blank=True)
     definition = models.TextField(null=True, blank=True)
