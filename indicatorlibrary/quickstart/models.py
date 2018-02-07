@@ -23,7 +23,7 @@ class Indicator(models.Model):
     name = models.CharField(max_length=255, null=False)
     data_source = models.ForeignKey(Source, null=True, blank=True)
     additional_fields = models.ForeignKey(AdditionalFields, null=True, blank=True)
-    tags = ArrayField(models.CharField(max_length=10, null=True, blank=True), size=8, null=True, blank=True)
+    tags = ArrayField(models.CharField(max_length=255, null=True, blank=True), size=8, null=True, blank=True)
     number = models.CharField(max_length=255, null=True, blank=True)
     source = models.CharField(max_length=255, null=True, blank=True)
     definition = models.TextField(null=True, blank=True)
