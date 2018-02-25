@@ -51,7 +51,7 @@ class Indicator(models.Model):
     quality_assurance = models.TextField(max_length=500, null=True, blank=True, verbose_name="Quality Assurance Measures")
     data_issues = models.TextField(max_length=500, null=True, blank=True, verbose_name="Data Issues")
     indicator_changes = models.TextField(max_length=500, null=True, blank=True, verbose_name="Changes to Indicator")
-    comments = models.TextField(max_length=255, null=T139rue, blank=True)
+    comments = models.TextField(max_length=255, null=True, blank=True)
     key_performance_indicator = models.BooleanField("Key Performance Indicator?",default=False)
     create_date = models.DateTimeField(null=True, blank=True)
     edit_date = models.DateTimeField(null=True, blank=True)
