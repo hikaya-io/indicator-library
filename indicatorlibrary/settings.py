@@ -39,7 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'rest_framework',
     'indicatorlibrary.quickstart',
-]
+    ]
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -78,9 +78,9 @@ WSGI_APPLICATION = 'indicatorlibrary.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'indicator_library',
+        'NAME': 'inddb',
         'USER': 'indlib',
-        'PASSWORD': 'password123',
+        'PASSWORD': 'ind',
         'HOST': '127.0.0.1',
         'PORT': '5432',
     }
