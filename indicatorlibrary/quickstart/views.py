@@ -2,7 +2,8 @@ from django.contrib.auth.models import *
 from rest_framework import viewsets
 from indicatorlibrary.quickstart.serializers import *
 from .models import Frequency, Indicator, Source
-
+from django.http import HttpResponse
+from django.views import generic
 
 class UserViewSet(viewsets.ModelViewSet):
     """
@@ -46,3 +47,14 @@ class AdditionalFieldsViewSet(viewsets.ModelViewSet):
     """
     queryset = AdditionalFields.objects.all()
     serializer_class = AdditionalFieldsSerializer
+
+
+class IndexView(generic.ListView): # class for indexing and filtering the indicators
+    model  = Indicator
+    template_name = "quickstart/index.html"
+    def get_queryset(self):
+        return Indicator.objects.all()
+
+
+class DetailView(generic.DetailView):
+    model = Indicator
