@@ -53,7 +53,7 @@ class IndexView(generic.ListView): # class for indexing and filtering the indica
     model  = Indicator
     template_name = "quickstart/index.html"
     def get_queryset(self):
-        return Indicator.objects.all()
+        return Indicator.objects.filter(level__startswith ="Outcome")
 
 
 class DetailView(generic.DetailView):

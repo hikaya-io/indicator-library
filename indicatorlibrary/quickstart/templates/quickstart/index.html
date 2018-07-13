@@ -1,15 +1,27 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <title>Title</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </head>
 <body>
 {% load staticfiles %}
 <h1>Projects</h1>
+ <div class="dropdown">
+  <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Dropdown Example
+  <span class="caret"></span></button>
+  <ul class="dropdown-menu">
+      <li><a href="#">Outcome</a></li>
+      <li><a href="#">Output</a></li>
+      <li><a href="#">Goal</a></li>
+      <li><a href="#">No level</a></li>
+  </ul>
+</div>
 <ul>
 {% for indicator in object_list %}
-    <li><a href="{% url  indicator.indicator_uuid %}"method='post'>{{ indicator.name }}</a></li>
+    <li><a href="{{indicator.id}} ">{{indicator.name}}</a></li>>
 {% endfor %}
 
 </ul>
