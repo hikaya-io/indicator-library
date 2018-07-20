@@ -1,0 +1,23 @@
+{% load static %}<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{% block title %}Simple is Better Than Complex{% endblock %}</title>
+      {% block content %}
+        <body>
+    <div class="container">
+  <form method="get">
+    {{ filter.form.as_p }}
+    <button type="submit">Search</button>
+  </form>
+  <ul>
+  {% for indicator in filter.qs %}
+    <li>{{ indicator.name }}</li>
+  {% endfor %}
+  </ul>
+{% endblock %}
+    </div>
+  </body>
+</html>

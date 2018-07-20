@@ -1,9 +1,11 @@
-from django.contrib.auth.models import *
+from .models import Indicator
 from rest_framework import viewsets
 from indicatorlibrary.quickstart.serializers import *
 from .models import Frequency, Indicator, Source
 from django.http import HttpResponse
 from django.views import generic
+from .filters import IndicatorFilter
+from django.shortcuts import render
 
 class UserViewSet(viewsets.ModelViewSet):
     """
@@ -58,3 +60,8 @@ class IndexView(generic.ListView): # class for indexing and filtering the indica
 
 class DetailView(generic.DetailView):
     model = Indicator
+
+def search(request):
+    indi_list = Indicator.objects.all()
+    indi_filter = IndicatorFilter(request.GET, queryset = indi_list)
+    return render(request, 'quickstart/indilist.html', {'filter': indi_filter})
