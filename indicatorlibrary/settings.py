@@ -26,8 +26,10 @@ SECRET_KEY = '=tg2x0!e#9@)0jgl1wgi8g*b=aw^ogd6d3k%9mplnna%v3+wn='
 DEBUG = True
 
 ALLOWED_HOSTS = []
-
-
+STATIC_URL = "/static/"
+STATICFILES_DIRS = (
+        os.path.join(BASE_DIR, 'static'),
+)
 # Application definition
 
 INSTALLED_APPS = [

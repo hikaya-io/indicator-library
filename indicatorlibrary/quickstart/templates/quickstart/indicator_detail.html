@@ -2,14 +2,42 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-</head>
 
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Simple Sidebar - Start Bootstrap Template</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="{%static '/vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet" type="text/css">
+
+    <!-- Custom styles for this template -->
+
+    <link href="{%static '/css/simple-sidebar.css' %}" rel="stylesheet">
+</head>
+<body>
 {% block content %}
+            <body>
+              <div id="wrapper">
+
+        <!-- Sidebar -->
+        <div id="sidebar-wrapper">
+            <ul class="sidebar-nav">
+                <li class="sidebar-brand">
+                    <a href="http://127.0.0.1:8000/quickstart/">
+                        Indicator Library
+                    </a>
+                </li>
+
+            </ul>
+        </div>
+                   <div id="page-content-wrapper">
+
+            <div class="container-fluid">
   <h1 style="colour: #9cff9e; font-size:32px">{{ indicator.name }}</h1>
+    <a href="#menu-toggle" class="btn btn-secondary" id="menu-toggle">Toggle Menu</a>
 
     <p><strong>Level:</strong> <a href="">{{ indicator.level }}</a></p> <!-- author detail link not yet defined -->
     <p><strong>Sector:</strong> {{ indicator.sector }}</p>
@@ -45,4 +73,20 @@
 
 
   </div>
+                   </div>
+              </div>
 {% endblock %}
+    <script src="{%static '/vendor/jquery/jquery.min.js'%}"></script>
+
+
+    <script src="{%static '/vendor/bootstrap/js/bootstrap.bundle.min.js'%}"></script>
+
+    <!-- Menu Toggle Script -->
+    <script>
+    $("#menu-toggle").click(function(e) {
+        e.preventDefault();
+        $("#wrapper").toggleClass("toggled");
+    });    </script>
+
+</body>
+</html>

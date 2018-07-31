@@ -1,18 +1,63 @@
 {% load static %}<!DOCTYPE html>
-<!DOCTYPE html>
-<html>
 <head>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Simple Sidebar - Start Bootstrap Template</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="{%static '/vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet" type="text/css">
+
+    <!-- Custom styles for this template -->
+
+    <link href="{%static '/css/simple-sidebar.css' %}" rel="stylesheet">
 </head>
       {% block content %}
         <body>
-    <div class="container">
+              <div id="wrapper">
+
+        <!-- Sidebar -->
+        <div id="sidebar-wrapper">
+            <ul class="sidebar-nav">
+                <li class="sidebar-brand">
+                    <a href="#">
+                        Start Bootstrap
+                    </a>
+                </li>
+                <li>
+                    <a href="#">Dashboard</a>
+                </li>
+                <li>
+                    <a href="#">Shortcuts</a>
+                </li>
+                <li>
+                    <a href="#">Overview</a>
+                </li>
+                <li>
+                    <a href="#">Events</a>
+                </li>
+                <li>
+                    <a href="#">About</a>
+                </li>
+                <li>
+                    <a href="#">Services</a>
+                </li>
+                <li>
+                    <a href="#">Contact</a>
+                </li>
+            </ul>
+        </div>
+                  <div id="page-content-wrapper">
+
+            <div class="container-fluid">
+            <h1 style="colour: #9cff9e; font-size:32px">Indicator Library</h1>
+
   <form method="get">
     {{ filter.form.as_p }}
-    <button type="submit">Search</button>
+    <button type="submit" class="btn btn-secondary">Search</button>
   </form>
   <ul>{% for indicator in filter.qs %}
     <li><a href="{{indicator.id}} ">{{indicator.name}}</a></li>>
@@ -20,5 +65,18 @@
   </ul>
 {% endblock %}
     </div>
+    </div>
+    <script src="{%static '/vendor/jquery/jquery.min.js'%}"></script>
+
+
+    <script src="{%static '/vendor/bootstrap/js/bootstrap.bundle.min.js'%}"></script>
+
+    <!-- Menu Toggle Script -->
+    <script>
+    $("#menu-toggle").click(function(e) {
+        e.preventDefault();
+        $("#wrapper").toggleClass("toggled");
+    });
+    </script>
   </body>
 </html>
