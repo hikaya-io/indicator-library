@@ -9,11 +9,40 @@
 </head>
 
 {% block content %}
-  <h1>Title: {{ indicator.name }}</h1>
+  <h1 style="colour: #9cff9e; font-size:32px">{{ indicator.name }}</h1>
 
-  <p><strong>Author:</strong> <a href="">{{ indicator.level }}</a></p> <!-- author detail link not yet defined -->
-  <p><strong>Summary:</strong> {{ indicator.sector }}</p>
-  <p><strong>ISBN:</strong> {{ indicator.uuid }}</p>
-  <p><strong>Language:</strong> {{ indicator.description }}</p>
+    <p><strong>Level:</strong> <a href="">{{ indicator.level }}</a></p> <!-- author detail link not yet defined -->
+    <p><strong>Sector:</strong> {{ indicator.sector }}</p>
+    <p><strong>Subsector:</strong> {{ indicator.subsector }}</p>
+    <p><strong>UUID:</strong> {{ indicator.uuid }}</p>
+    <p><strong>Objectives:</strong> {{ indicator.objectives }}</p>
+    <p><strong>Comments:</strong> {{ indicator.comments }}</p>
+    <p><strong>Data Source:</strong> {{ indicator.data_source }}</p>
+    <p><strong>Comments:</strong> {{ indicator.comments }}</p>
+    <p><strong>Additional Fields:</strong> {{ indicator.additional_fields }}</p>
+    <p><strong>Definition:</strong> {{ indicator.definition }}</p>
+    <p><strong>Justification:</strong> {{ indicator.justification }}</p>
+    <p><strong>Unit of Measure:</strong> {{ indicator.unit_of_measure }}</p>
+    <p><strong>Unit Description:</strong> {{ indicator.unit_description }}</p>
+    <p><strong>Disaggregation:</strong> {{ indicator.disaggregation }}</p>
+    <p><strong>Direction  of Change:</strong> {{ indicator.direction_of_change }}</p>
+    <p><strong>Baseline:</strong> {{ indicator.baseline }}</p>
+    <p><strong>LOP Target:</strong> {{ indicator.lop_target }}</p>
+    <p><strong>Rationale for target:</strong> {{ indicator.rationale_for_target }}</p>
+    <p><strong>Means of verification:</strong> {{ indicator.means_of_verification }}</p>
+    <p><strong>Questions Format:</strong> {{ indicator.question_format }}</p>
+    <p><strong>Data collection method:</strong> {{ indicator.data_collection_method }}</p>
+    <p><strong>Data collection frequency:</strong> {{ indicator.data_collection_frequency }}</p>
+    <p><strong>Denominator:</strong> {{ indicator.denominator }}</p>
+    <p><strong>Numerator:</strong> {{ indicator.numerator }}</p>
+    <p><strong>Data Points:</strong> {{ indicator.data_points}}</p>
+    <p><strong>Methods of Analysis:</strong> {{ indicator.methods_of_analysis}}</p>
+    <p><strong>Information Use:</strong> {{ indicator.information_use}}</p>
+    <p><strong>Quality Assurance:</strong> {{ indicator.quality_assurance}}</p>
+    <p><strong>Data issues:</strong> {{ indicator.data_issues}}</p>
+
+
+
+
   </div>
 {% endblock %}
