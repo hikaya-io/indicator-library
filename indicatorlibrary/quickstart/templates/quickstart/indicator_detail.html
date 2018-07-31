@@ -14,7 +14,7 @@
     <p><strong>Level:</strong> <a href="">{{ indicator.level }}</a></p> <!-- author detail link not yet defined -->
     <p><strong>Sector:</strong> {{ indicator.sector }}</p>
     <p><strong>Subsector:</strong> {{ indicator.subsector }}</p>
-    <p><strong>UUID:</strong> {{ indicator.uuid }}</p>
+    <p><strong>UUID:</strong> {{ indicator.id }}</p>
     <p><strong>Objectives:</strong> {{ indicator.objectives }}</p>
     <p><strong>Comments:</strong> {{ indicator.comments }}</p>
     <p><strong>Data Source:</strong> {{ indicator.data_source }}</p>
@@ -40,7 +40,7 @@
     <p><strong>Information Use:</strong> {{ indicator.information_use}}</p>
     <p><strong>Quality Assurance:</strong> {{ indicator.quality_assurance}}</p>
     <p><strong>Data issues:</strong> {{ indicator.data_issues}}</p>
-
+    <a href="http://127.0.0.1:8000/indicator/{{ indicator.id}}/?format=json"><strong>Json API:</strong> http://127.0.0.1:8000/indicator/{{ indicator.id}}/?format=json</a>
 
 
 
