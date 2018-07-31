@@ -57,11 +57,22 @@ class IndexView(generic.ListView): # class for indexing and filtering the indica
     def get_queryset(self):
         return Indicator.objects.filter(level__startswith ="Outcome")
 
-
-class DetailView(generic.DetailView):
+class IndicatorDetailView(generic.DetailView):
     model = Indicator
+
+def indicator_detail_view(request, primary_key):
+    try:
+        indicator = Indicator.objects.get(pk=primary_key)
+    except Indicator.DoesNotExist:
+        raise Http404('Book does not exist')
+
+    # from django.shortcuts import get_object_or_404
+    # book = get_object_or_404(Book, pk=primary_key)
+
+    return render(request, 'catalog/book_detail.html', context={'Indicator': indicator})
 
 def search(request):
     indi_list = Indicator.objects.all()
     indi_filter = IndicatorFilter(request.GET, queryset = indi_list)
     return render(request, 'quickstart/indilist.html', {'filter': indi_filter})
+

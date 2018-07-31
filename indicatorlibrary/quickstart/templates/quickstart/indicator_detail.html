@@ -7,18 +7,13 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </head>
-      {% block content %}
-        <body>
-    <div class="container">
-  <form method="get">
-    {{ filter.form.as_p }}
-    <button type="submit">Search</button>
-  </form>
-  <ul>{% for indicator in filter.qs %}
-    <li><a href="{{indicator.id}} ">{{indicator.name}}</a></li>>
-{% endfor %}
-  </ul>
+
+{% block content %}
+  <h1>Title: {{ indicator.name }}</h1>
+
+  <p><strong>Author:</strong> <a href="">{{ indicator.level }}</a></p> <!-- author detail link not yet defined -->
+  <p><strong>Summary:</strong> {{ indicator.sector }}</p>
+  <p><strong>ISBN:</strong> {{ indicator.uuid }}</p>
+  <p><strong>Language:</strong> {{ indicator.description }}</p>
+  </div>
 {% endblock %}
-    </div>
-  </body>
-</html>

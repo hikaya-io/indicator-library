@@ -30,7 +30,9 @@ router.register(r'additional_fields', views.AdditionalFieldsViewSet)
 urlpatterns = [
     url(r'^', include(router.urls)),
     url(r'^index/$', views.IndexView.as_view(), name='index'),
-    url(r'^(?P<pk>[0-9]+)/$', views.DetailView.as_view(), name='detail'),#url for index
+    #url(r'^(?P<pk>[0-9]+)/$', views.DetailView.as_view(), name='detail'),#url for index
     url(r'^api-auth/', include('rest_framework.urls', namespace='rest_framework')),
     url(r'^quickstart/$', views.search, name = 'qs'),
+    url(r'^quickstart/(?P<pk>\d+)$', views.IndicatorDetailView.as_view(), name='Indicator-view')
+
 ]
