@@ -19,8 +19,9 @@ class AdditionalFields(models.Model):
 class Indicator(models.Model):
     indicator_uuid = models.TextField(max_length=500,verbose_name='Indicator UUID', default=uuid.uuid4, unique=True, blank=True)
     level = models.TextField(blank=True)
-    # class Meta:
-    #     ordering = ('level',)
+    class Meta:
+         def __str__(self):
+            return self.level
     objectives = models.CharField(max_length=500, blank=True,verbose_name="Objective")
     name = models.TextField(max_length = 1000, null=False)
     sector = models.CharField(max_length=500, null=True, blank=True)
