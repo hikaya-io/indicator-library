@@ -1,7 +1,12 @@
-import django_filters
+from django_filters import FilterSet, ModelChoiceFilter
 from .models import Indicator
 
-class IndicatorFilter(django_filters.FilterSet):
+class IndicatorFilter(FilterSet):
+    # sector = ModelChoiceFilter(queryset = Indicator.objects.order_by().values('sector').distinct())
     class Meta:
         model = Indicator
-        fields = ['level','sector']
+        fields = {
+            'level':['exact'],
+            'sector':['exact'],
+            'name': ['icontains']
+        }

@@ -59,11 +59,32 @@
     {{ filter.form.as_p }}
     <button type="submit" class="btn btn-secondary">Search</button>
   </form>
-  <ul>{% for indicator in filter.qs %}
-    <li><a href="{{indicator.id}} ">{{indicator.name}}</a></li>>
+          <table class="table">
+  <thead>
+    <tr>
+        <th scope="col">#</th>
+      <th scope="col">Indicator ID</th>
+      <th scope="col">Name</th>
+      <th scope="col">Level</th>
+      <th scope="col">Sector</th>
+        <th scope="col">JSON API</th>
+    </tr>
+  </thead>
+  <tbody>
+
+  {% for indicator in filter.qs %}
+    <td>
+      <th scope="row">{{ indicator.id }}</th>
+      <td> <a href="{{indicator.id}} ">{{indicator.name}}</a></td>
+      <td>{{indicator.level}}</td>
+      <td>{{indicator.sector}}</td>
+      <td><a href="http://127.0.0.1:8000/indicator/{{ indicator.id}}/?format=json"><strong>Json API:</strong> http://127.0.0.1:8000/indicator/{{ indicator.id}}/?format=json</a></td>
+    </tr>
+
 {% endfor %}
-  </ul>
 {% endblock %}
+  </tbody>
+</table>
     </div>
     </div>
     <script src="{%static '/vendor/jquery/jquery.min.js'%}"></script>
@@ -78,5 +99,6 @@
         $("#wrapper").toggleClass("toggled");
     });
     </script>
+
   </body>
 </html>
