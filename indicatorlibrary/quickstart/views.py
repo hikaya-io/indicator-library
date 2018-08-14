@@ -1,8 +1,11 @@
-from django.contrib.auth.models import *
+from .models import Indicator
 from rest_framework import viewsets
 from indicatorlibrary.quickstart.serializers import *
 from .models import Frequency, Indicator, Source
-
+from django.http import HttpResponse
+from django.views import generic
+from .filters import IndicatorFilter
+from django.shortcuts import render
 
 class UserViewSet(viewsets.ModelViewSet):
     """
@@ -46,3 +49,21 @@ class AdditionalFieldsViewSet(viewsets.ModelViewSet):
     """
     queryset = AdditionalFields.objects.all()
     serializer_class = AdditionalFieldsSerializer
+
+
+class IndexView(generic.ListView): # class for indexing and filtering the indicators
+    model  = Indicator
+    template_name = "quickstart/index.html"
+    def get_queryset(self):
+        return Indicator.objects.filter(level__startswith ="Outcome")
+
+class IndicatorDetailView(generic.DetailView):
+    model = Indicator
+    paginate_by = 10
+
+
+def search(request):
+    indi_list = Indicator.objects.all()
+    indi_filter = IndicatorFilter(request.GET, queryset = indi_list)
+    return render(request, 'quickstart/indilist.html', {'filter': indi_filter})
+

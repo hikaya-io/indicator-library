@@ -26,8 +26,10 @@ SECRET_KEY = '=tg2x0!e#9@)0jgl1wgi8g*b=aw^ogd6d3k%9mplnna%v3+wn='
 DEBUG = True
 
 ALLOWED_HOSTS = []
-
-
+STATIC_URL = "/static/"
+STATICFILES_DIRS = (
+        os.path.join(BASE_DIR, 'static'),
+)
 # Application definition
 
 INSTALLED_APPS = [
@@ -39,7 +41,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'rest_framework',
     'indicatorlibrary.quickstart',
-]
+    'django_filters',
+    ]
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -78,9 +81,9 @@ WSGI_APPLICATION = 'indicatorlibrary.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'indicator_library',
+        'NAME': 'inddb',
         'USER': 'indlib',
-        'PASSWORD': 'password123',
+        'PASSWORD': 'ind',
         'HOST': '127.0.0.1',
         'PORT': '5432',
     }

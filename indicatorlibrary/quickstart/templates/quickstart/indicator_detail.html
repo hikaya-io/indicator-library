@@ -1,0 +1,92 @@
+{% load static %}<!DOCTYPE html>
+<!DOCTYPE html>
+<html>
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Simple Sidebar - Start Bootstrap Template</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="{%static '/vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet" type="text/css">
+
+    <!-- Custom styles for this template -->
+
+    <link href="{%static '/css/simple-sidebar.css' %}" rel="stylesheet">
+</head>
+<body>
+{% block content %}
+            <body>
+              <div id="wrapper">
+
+        <!-- Sidebar -->
+        <div id="sidebar-wrapper">
+            <ul class="sidebar-nav">
+                <li class="sidebar-brand">
+                    <a href="http://127.0.0.1:8000/quickstart/">
+                        Indicator Library
+                    </a>
+                </li>
+
+            </ul>
+        </div>
+                   <div id="page-content-wrapper">
+
+            <div class="container-fluid">
+  <h1 style="colour: #9cff9e; font-size:32px">{{ indicator.name }}</h1>
+    <a href="#menu-toggle" class="btn btn-secondary" id="menu-toggle">Toggle Menu</a>
+
+    <p><strong>Level:</strong> <a href="">{{ indicator.level }}</a></p> <!-- author detail link not yet defined -->
+    <p><strong>Sector:</strong> {{ indicator.sector }}</p>
+    <p><strong>Subsector:</strong> {{ indicator.subsector }}</p>
+    <p><strong>UUID:</strong> {{ indicator.id }}</p>
+    <p><strong>Objectives:</strong> {{ indicator.objectives }}</p>
+    <p><strong>Comments:</strong> {{ indicator.comments }}</p>
+    <p><strong>Data Source:</strong> {{ indicator.data_source }}</p>
+    <p><strong>Comments:</strong> {{ indicator.comments }}</p>
+    <p><strong>Additional Fields:</strong> {{ indicator.additional_fields }}</p>
+    <p><strong>Definition:</strong> {{ indicator.definition }}</p>
+    <p><strong>Justification:</strong> {{ indicator.justification }}</p>
+    <p><strong>Unit of Measure:</strong> {{ indicator.unit_of_measure }}</p>
+    <p><strong>Unit Description:</strong> {{ indicator.unit_description }}</p>
+    <p><strong>Disaggregation:</strong> {{ indicator.disaggregation }}</p>
+    <p><strong>Direction  of Change:</strong> {{ indicator.direction_of_change }}</p>
+    <p><strong>Baseline:</strong> {{ indicator.baseline }}</p>
+    <p><strong>LOP Target:</strong> {{ indicator.lop_target }}</p>
+    <p><strong>Rationale for target:</strong> {{ indicator.rationale_for_target }}</p>
+    <p><strong>Means of verification:</strong> {{ indicator.means_of_verification }}</p>
+    <p><strong>Questions Format:</strong> {{ indicator.question_format }}</p>
+    <p><strong>Data collection method:</strong> {{ indicator.data_collection_method }}</p>
+    <p><strong>Data collection frequency:</strong> {{ indicator.data_collection_frequency }}</p>
+    <p><strong>Denominator:</strong> {{ indicator.denominator }}</p>
+    <p><strong>Numerator:</strong> {{ indicator.numerator }}</p>
+    <p><strong>Data Points:</strong> {{ indicator.data_points}}</p>
+    <p><strong>Methods of Analysis:</strong> {{ indicator.methods_of_analysis}}</p>
+    <p><strong>Information Use:</strong> {{ indicator.information_use}}</p>
+    <p><strong>Quality Assurance:</strong> {{ indicator.quality_assurance}}</p>
+    <p><strong>Data issues:</strong> {{ indicator.data_issues}}</p>
+    <a href="http://127.0.0.1:8000/indicator/{{ indicator.id}}/?format=json"><strong>Json API:</strong> http://127.0.0.1:8000/indicator/{{ indicator.id}}/?format=json</a>
+
+
+
+  </div>
+                   </div>
+              </div>
+{% endblock %}
+    <script src="{%static '/vendor/jquery/jquery.min.js'%}"></script>
+
+
+    <script src="{%static '/vendor/bootstrap/js/bootstrap.bundle.min.js'%}"></script>
+
+    <!-- Menu Toggle Script -->
+    <script>
+    $("#menu-toggle").click(function(e) {
+        e.preventDefault();
+        $("#wrapper").toggleClass("toggled");
+    });    </script>
+
+</body>
+</html>
