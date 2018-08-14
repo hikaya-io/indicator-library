@@ -16,6 +16,7 @@ Including another URLconf
 from django.conf.urls import url, include
 from rest_framework import routers
 from indicatorlibrary.quickstart import views
+import django.contrib.admin as admin
 
 router = routers.DefaultRouter()
 router.register(r'users', views.UserViewSet)
@@ -33,6 +34,7 @@ urlpatterns = [
     #url(r'^(?P<pk>[0-9]+)/$', views.DetailView.as_view(), name='detail'),#url for index
     url(r'^api-auth/', include('rest_framework.urls', namespace='rest_framework')),
     url(r'^quickstart/$', views.search, name = 'qs'),
-    url(r'^quickstart/(?P<pk>\d+)$', views.IndicatorDetailView.as_view(), name='Indicator-view')
+    url(r'^quickstart/(?P<pk>\d+)$', views.IndicatorDetailView.as_view(), name='Indicator-view'),
+    url(r'^admin/', admin.site.urls),
 
 ]
