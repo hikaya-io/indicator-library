@@ -5,7 +5,26 @@ from .models import Frequency, Indicator, Source
 from django.http import HttpResponse
 from django.views import generic
 from .filters import IndicatorFilter
-from django.shortcuts import render
+from django.shortcuts import render,redirect
+from django.db import transaction
+from django.contrib.auth.decorators import login_required
+from .forms import SignUpForm
+from django.contrib.auth import login, authenticate
+
+def signup(request):
+    if request.method == 'POST':
+        form = SignUpForm(request.POST)
+        if form.is_valid():
+            user = form.save()
+            user.refresh_from_db()  # load the profile instance created by the signal
+            user.save()
+            raw_password = form.cleaned_data.get('password1')
+            user = authenticate(username=user.username, password=raw_password)
+            login(request, user)
+            return redirect('catalog')
+    else:
+        form = SignUpForm()
+    return render(request, 'quickstart/signup_form.html', {'form': form})
 
 class UserViewSet(viewsets.ModelViewSet):
     """
@@ -52,7 +71,7 @@ class AdditionalFieldsViewSet(viewsets.ModelViewSet):
 
 
 class IndexView(generic.ListView): # class for indexing and filtering the indicators
-    model  = Indicator
+    model = Indicator
     template_name = "quickstart/index.html"
     def get_queryset(self):
         return Indicator.objects.filter(level__startswith ="Outcome")
