@@ -1,4 +1,12 @@
-# indicator-library
+# Indicator Library
+
+## Background
+
+TolaData is supporting an open source project called the Indicator Library, which started as an exercise to collect and compile nearly 2,500 commonly used indicators used by NGOs and donors in the international development and humanitarian sector as well as to include indicators used for corporate reporting on the SDGs. 
+
+The project’s goal is to improve the use of indicators by promoting standard, reusable indicators alongside guidance to help users effectively plan and collect useful data for their projects.
+
+## Install
 
 Here are the steps to create tables in PostgreSQL
 1. Set up Postgres
