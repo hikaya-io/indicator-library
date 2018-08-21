@@ -10,6 +10,9 @@ from django.db import transaction
 from django.contrib.auth.decorators import login_required
 from .forms import SignUpForm
 from django.contrib.auth import login, authenticate
+from django.contrib.auth.models import User
+
+
 
 def signup(request):
     if request.method == 'POST':
@@ -25,6 +28,15 @@ def signup(request):
     else:
         form = SignUpForm()
     return render(request, 'quickstart/signup_form.html', {'form': form})
+
+def view_profile(request, pk=None):
+    if pk:
+        user = User.objects.get(pk=pk)
+    else:
+        user = request.user
+    args = {'user': user}
+    return render(request, 'quickstart/Profile.html', args)
+
 
 class UserViewSet(viewsets.ModelViewSet):
     """

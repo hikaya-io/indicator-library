@@ -1,55 +1,13 @@
-{% load static %}<!DOCTYPE html>
-<head>
+{% extends 'base.html' %}
 
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
-    <meta name="author" content="">
+{% block head %}
+<title>Profile</title>
+{% endblock %}
 
-    <title>Simple Sidebar - Start Bootstrap Template</title>
-
-    <!-- Bootstrap core CSS -->
-    <link href="{%static '/vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet" type="text/css">
-
-    <!-- Custom styles for this template -->
-
-    <link href="{%static '/css/simple-sidebar.css' %}" rel="stylesheet">
-</head>
-        <body>
-              <div id="wrapper">
-
-        <!-- Sidebar -->
-        <div id="sidebar-wrapper">
-            <ul class="sidebar-nav">
-                <li class="sidebar-brand">
-                    <a href="#">
-                        Start Bootstrap
-                    </a>
-                </li>
-                <li>
-                    <a href="#">Dashboard</a>
-                </li>
-                <li>
-                    <a href="#">Shortcuts</a>
-                </li>
-                <li>
-                    <a href="#">Overview</a>
-                </li>
-                <li>
-                    <a href="#">Events</a>
-                </li>
-                <li>
-                    <a href="#">About</a>
-                </li>
-                <li>
-                    <a href="#">Services</a>
-                </li>
-                <li>
-                    <a href="#">Contact</a>
-                </li>
-            </ul>
-        </div>
-                  <div id="page-content-wrapper">
-
-            <div class="container-fluid">
-            <h1 style="colour: #9cff9e; font-size:32px">Indicator Library</h1>
+{% block body %}
+<div class="container">
+    <h1>Profile</h1>
+    <p>Username: {{ user.username }}</p>
+    <p>Email: {{ user.email }}</p>
+</div>
+{% endblock %}

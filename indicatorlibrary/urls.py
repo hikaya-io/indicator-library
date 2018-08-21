@@ -37,5 +37,5 @@ urlpatterns = [
     url(r'^catalog/(?P<pk>\d+)$', views.IndicatorDetailView.as_view(), name='Indicator-view'),
     url(r'^admin/', admin.site.urls),
     url(r'^signup/$', views.signup, name='signup'),
-
+    url(r'^profile/$', views.view_profile, name='view_profile'),
 ]
