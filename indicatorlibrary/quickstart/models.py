@@ -12,6 +12,9 @@ class Profile(models.Model):
     user = models.OneToOneField(User, on_delete=models.CASCADE)
     organization = models.TextField(max_length=500, blank=True)
     location = models.CharField(max_length=30, blank=True)
+    class Meta:
+        permissions = (
+            ("can_add_indicator", "Can Modify Indicator"),)
 # @receiver(post_save, sender=User)
 # def create_user_profile(sender, instance, created, **kwargs):
 #     if created:
@@ -20,10 +23,8 @@ class Profile(models.Model):
 # @receiver(post_save, sender=User)
 # def save_user_profile(sender, instance, **kwargs):
 #     instance.profile.save()
-    class Meta:
-        permissions = (
-            ("can_add_indicator", "Can Modify Indicator"),)
-
+    def __str__(self):
+        return self.user.username
 @receiver(post_save, sender=User)
 def update_user_profile(sender, instance, created, **kwargs):
     if created:
@@ -64,14 +65,14 @@ class Indicator(models.Model):
     definition = models.TextField(null=True, blank=True)
     justification = models.TextField(max_length=500, null=True, blank=True, verbose_name="Rationale or Justification for Indicator")
     unit_of_measure = models.TextField(max_length=500, null=True, blank=True, verbose_name="Unit of Measure")
-    unit_description = models.TextField(max_length=500, null=True, blank=True, verbose_name="Unit Description"),
+    unit_description = models.TextField(max_length=500, null=True, blank=True, verbose_name="Unit Description")
     disaggregation = models.TextField(max_length=500, blank=True)
-    direction_of_change = models.TextField(max_length=500, null=True, blank=True, verbose_name="Direction of Change"),
+    direction_of_change = models.TextField(max_length=500, null=True, blank=True, verbose_name="Direction of Change")
     baseline = models.TextField(max_length=500, null=True, blank=True)
     lop_target = models.IntegerField("LOP Target",default=0, blank=True)
     rationale_for_target = models.TextField(max_length=500, null=True, blank=True)
     means_of_verification = models.TextField(max_length=500, null=True, blank=True, verbose_name="Means of Verification")
-    question_format = models.TextField(max_length=500, null=True, blank=True, verbose_name="Question Format"),
+    question_format = models.TextField(max_length=500, null=True, blank=True, verbose_name="Question Format")
     data_collection_method = models.TextField(max_length=500, null=True, blank=True, verbose_name="Data Collection Method")
     data_collection_frequency = models.ForeignKey(Frequency, related_name="data_collection_frequency",null=True, blank=True, verbose_name="Frequency of Data Collection", on_delete=models.CASCADE)
     denominator = models.TextField(max_length=500, null=True, blank=True)
