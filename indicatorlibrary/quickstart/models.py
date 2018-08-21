@@ -1,8 +1,38 @@
 from django.db import models
 from django.contrib.postgres.fields import JSONField, ArrayField
 import uuid
-
+from django.contrib.auth.models import User
+from django.db.models.signals import post_save
+from django.dispatch import receiver
 # Create your models here.    created_by = models.ForeignKey('auth.User', related_name='indicators', null=True, blank=True, on_delete=models.SET_NULL)
+
+
+
+class Profile(models.Model):
+    user = models.OneToOneField(User, on_delete=models.CASCADE)
+    organization = models.TextField(max_length=500, blank=True)
+    location = models.CharField(max_length=30, blank=True)
+    class Meta:
+        permissions = (
+            ("can_add_indicator", "Can Modify Indicator"),)
+# @receiver(post_save, sender=User)
+# def create_user_profile(sender, instance, created, **kwargs):
+#     if created:
+#         Profile.objects.create(user=instance)
+#
+# @receiver(post_save, sender=User)
+# def save_user_profile(sender, instance, **kwargs):
+#     instance.profile.save()
+    def __str__(self):
+        return self.user.username
+def create_profile(sender, **kwargs):
+    if kwargs['created']:
+        user_profile = UserProfile.objects.create(user=kwargs['instance'])
+
+post_save.connect(create_profile, sender=User)
+
+
+
 
 class Source(models.Model):
     source_uuid = models.CharField(max_length=500,verbose_name='Source UUID', default=uuid.uuid4, unique=True, blank=True)
@@ -36,14 +66,14 @@ class Indicator(models.Model):
     definition = models.TextField(null=True, blank=True)
     justification = models.TextField(max_length=500, null=True, blank=True, verbose_name="Rationale or Justification for Indicator")
     unit_of_measure = models.TextField(max_length=500, null=True, blank=True, verbose_name="Unit of Measure")
-    unit_description = models.TextField(max_length=500, null=True, blank=True, verbose_name="Unit Description"),
+    unit_description = models.TextField(max_length=500, null=True, blank=True, verbose_name="Unit Description")
     disaggregation = models.TextField(max_length=500, blank=True)
-    direction_of_change = models.TextField(max_length=500, null=True, blank=True, verbose_name="Direction of Change"),
+    direction_of_change = models.TextField(max_length=500, null=True, blank=True, verbose_name="Direction of Change")
     baseline = models.TextField(max_length=500, null=True, blank=True)
     lop_target = models.IntegerField("LOP Target",default=0, blank=True)
     rationale_for_target = models.TextField(max_length=500, null=True, blank=True)
     means_of_verification = models.TextField(max_length=500, null=True, blank=True, verbose_name="Means of Verification")
-    question_format = models.TextField(max_length=500, null=True, blank=True, verbose_name="Question Format"),
+    question_format = models.TextField(max_length=500, null=True, blank=True, verbose_name="Question Format")
     data_collection_method = models.TextField(max_length=500, null=True, blank=True, verbose_name="Data Collection Method")
     data_collection_frequency = models.ForeignKey(Frequency, related_name="data_collection_frequency",null=True, blank=True, verbose_name="Frequency of Data Collection", on_delete=models.CASCADE)
     denominator = models.TextField(max_length=500, null=True, blank=True)
