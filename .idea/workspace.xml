@@ -2,13 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3f68546d-552d-450a-b2c5-84fa0f403a6f" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/indicatorlibrary/quickstart/templates/quickstart/Profile.html" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/indicatorlibrary/quickstart/admin.py" afterPath="$PROJECT_DIR$/indicatorlibrary/quickstart/admin.py" />
-      <change beforePath="$PROJECT_DIR$/indicatorlibrary/quickstart/forms.py" afterPath="$PROJECT_DIR$/indicatorlibrary/quickstart/forms.py" />
-      <change beforePath="$PROJECT_DIR$/indicatorlibrary/quickstart/models.py" afterPath="$PROJECT_DIR$/indicatorlibrary/quickstart/models.py" />
-      <change beforePath="$PROJECT_DIR$/indicatorlibrary/quickstart/templates/registration/base.html" afterPath="$PROJECT_DIR$/indicatorlibrary/quickstart/templates/base.html" />
-      <change beforePath="$PROJECT_DIR$/indicatorlibrary/quickstart/templates/registration/signup.html" afterPath="$PROJECT_DIR$/indicatorlibrary/quickstart/templates/registration/signup.html" />
+      <change beforePath="$PROJECT_DIR$/indicatorlibrary/quickstart/templates/base.html" afterPath="$PROJECT_DIR$/indicatorlibrary/quickstart/templates/base.html" />
+      <change beforePath="$PROJECT_DIR$/indicatorlibrary/quickstart/templates/quickstart/signup_form.html" afterPath="$PROJECT_DIR$/indicatorlibrary/quickstart/templates/quickstart/signup_form.html" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -29,10 +24,20 @@
         <entry file="file://$PROJECT_DIR$/indicatorlibrary/quickstart/models.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="576">
-              <caret line="32" column="0" lean-forward="true" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
+              <caret line="32" column="0" lean-forward="false" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
               <folding>
                 <element signature="e#0#28#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="indicator_detail.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/indicatorlibrary/quickstart/templates/quickstart/indicator_detail.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="143">
+              <caret line="39" column="46" lean-forward="false" selection-start-line="39" selection-start-column="0" selection-end-line="40" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -52,8 +57,18 @@
       <file leaf-file-name="signup.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/indicatorlibrary/quickstart/templates/registration/signup.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="216">
-              <caret line="12" column="0" lean-forward="false" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+            <state relative-caret-position="18">
+              <caret line="1" column="20" lean-forward="true" selection-start-line="1" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="signup_form.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/indicatorlibrary/quickstart/templates/quickstart/signup_form.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="360">
+              <caret line="20" column="0" lean-forward="true" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -62,8 +77,8 @@
       <file leaf-file-name="base.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/indicatorlibrary/quickstart/templates/base.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="467">
-              <caret line="71" column="13" lean-forward="false" selection-start-line="71" selection-start-column="13" selection-end-line="71" selection-end-column="13" />
+            <state relative-caret-position="342">
+              <caret line="19" column="0" lean-forward="true" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
               <folding>
                 <element signature="n#style#0;n#h1#0;n#div#0;n#div#1;n#div#0;n#body#0;n#!!top" expanded="true" />
               </folding>
@@ -71,24 +86,22 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="indilist.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/indicatorlibrary/quickstart/templates/quickstart/indilist.html">
+      <file leaf-file-name="base_generic.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/indicatorlibrary/quickstart/templates/base_generic.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="143">
-              <caret line="89" column="0" lean-forward="false" selection-start-line="89" selection-start-column="0" selection-end-line="100" selection-end-column="13" />
+            <state relative-caret-position="108">
+              <caret line="6" column="92" lean-forward="false" selection-start-line="6" selection-start-column="92" selection-end-line="6" selection-end-column="92" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="views.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/indicatorlibrary/quickstart/views.py">
+      <file leaf-file-name="indilist.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/indicatorlibrary/quickstart/templates/quickstart/indilist.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="360">
-              <caret line="20" column="10" lean-forward="false" selection-start-line="20" selection-start-column="10" selection-end-line="20" selection-end-column="10" />
-              <folding>
-                <element signature="e#0#29#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="1620">
+              <caret line="89" column="0" lean-forward="false" selection-start-line="89" selection-start-column="0" selection-end-line="100" selection-end-column="13" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -112,26 +125,6 @@
                 <element signature="e#0#49#0" expanded="true" />
                 <marker date="1534847010872" expanded="true" signature="1242:1352" ph="..." />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="home.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/indicatorlibrary/quickstart/templates/registration/home.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="324">
-              <caret line="18" column="0" lean-forward="false" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="settings.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/indicatorlibrary/settings.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1224">
-              <caret line="129" column="0" lean-forward="false" selection-start-line="129" selection-start-column="0" selection-end-line="129" selection-end-column="0" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -190,7 +183,6 @@
         <option value="$PROJECT_DIR$/indicatorlibrary/quickstart/templates/quickstart/base_generic.html" />
         <option value="$PROJECT_DIR$/indicatorlibrary/quickstart/templates/quickstart/indilist.html" />
         <option value="$PROJECT_DIR$/indicatorlibrary/quickstart/filters.py" />
-        <option value="$PROJECT_DIR$/indicatorlibrary/quickstart/templates/quickstart/signup_form.html" />
         <option value="$PROJECT_DIR$/indicatorlibrary/quickstart/views.py" />
         <option value="$PROJECT_DIR$/indicatorlibrary/urls.py" />
         <option value="$PROJECT_DIR$/indicatorlibrary/quickstart/admin.py" />
@@ -198,6 +190,7 @@
         <option value="$PROJECT_DIR$/indicatorlibrary/quickstart/models.py" />
         <option value="$PROJECT_DIR$/indicatorlibrary/quickstart/templates/quickstart/Profile.html" />
         <option value="$PROJECT_DIR$/indicatorlibrary/quickstart/templates/registration/signup.html" />
+        <option value="$PROJECT_DIR$/indicatorlibrary/quickstart/templates/quickstart/signup_form.html" />
         <option value="$PROJECT_DIR$/indicatorlibrary/quickstart/templates/base.html" />
       </list>
     </option>
@@ -271,6 +264,11 @@
               <item name="quickstart" type="462c0819:PsiDirectoryNode" />
               <item name="templates" type="462c0819:PsiDirectoryNode" />
               <item name="registration" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="indicator-library" type="b2602c69:ProjectViewProjectNode" />
+              <item name="indicator-library" type="462c0819:PsiDirectoryNode" />
+              <item name="scripts" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -581,22 +579,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/indicatorlibrary/quickstart/templates/base_generic.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="108">
-          <caret line="6" column="92" lean-forward="false" selection-start-line="6" selection-start-column="92" selection-end-line="6" selection-end-column="92" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/indicatorlibrary/quickstart/templates/quickstart/indicator_detail.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1260">
-          <caret line="70" column="170" lean-forward="false" selection-start-line="70" selection-start-column="4" selection-end-line="70" selection-end-column="170" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/Desktop/report.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
@@ -655,23 +637,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/indicatorlibrary/quickstart/templates/quickstart/signup_form.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-8">
-          <caret line="30" column="14" lean-forward="false" selection-start-line="30" selection-start-column="14" selection-end-line="30" selection-end-column="14" />
-          <folding>
-            <element signature="n#style#0;n#small#0;n#p#0;n#form#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#p#1;n#form#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/indicatorlibrary/urls.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-8">
           <caret line="39" column="0" lean-forward="false" selection-start-line="39" selection-start-column="0" selection-end-line="39" selection-end-column="0" />
           <folding>
-            <element signature="e#650#691#0" expanded="true" />
+            <element signature="e#650#691#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -750,17 +721,17 @@
     <entry file="file://$PROJECT_DIR$/indicatorlibrary/quickstart/models.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="576">
-          <caret line="32" column="0" lean-forward="true" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
+          <caret line="32" column="0" lean-forward="false" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
           <folding>
             <element signature="e#0#28#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/indicatorlibrary/quickstart/templates/registration/signup.html">
+    <entry file="file://$PROJECT_DIR$/indicatorlibrary/quickstart/templates/base_generic.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="12" column="0" lean-forward="false" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+        <state relative-caret-position="108">
+          <caret line="6" column="92" lean-forward="false" selection-start-line="6" selection-start-column="92" selection-end-line="6" selection-end-column="92" />
           <folding />
         </state>
       </provider>
@@ -775,18 +746,42 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/indicatorlibrary/quickstart/templates/registration/signup.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="18">
+          <caret line="1" column="20" lean-forward="true" selection-start-line="1" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/indicatorlibrary/quickstart/templates/quickstart/signup_form.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="20" column="0" lean-forward="true" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/indicatorlibrary/quickstart/templates/quickstart/indilist.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="143">
+        <state relative-caret-position="1620">
           <caret line="89" column="0" lean-forward="false" selection-start-line="89" selection-start-column="0" selection-end-line="100" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/indicatorlibrary/quickstart/templates/quickstart/indicator_detail.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="143">
+          <caret line="39" column="46" lean-forward="false" selection-start-line="39" selection-start-column="0" selection-end-line="40" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/indicatorlibrary/quickstart/templates/base.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="467">
-          <caret line="71" column="13" lean-forward="false" selection-start-line="71" selection-start-column="13" selection-end-line="71" selection-end-column="13" />
+        <state relative-caret-position="342">
+          <caret line="19" column="0" lean-forward="true" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
           <folding>
             <element signature="n#style#0;n#h1#0;n#div#0;n#div#1;n#div#0;n#body#0;n#!!top" expanded="true" />
           </folding>
