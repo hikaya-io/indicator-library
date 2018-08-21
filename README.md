@@ -6,6 +6,10 @@ TolaData is supporting an open source project called the Indicator Library, whic
 
 The project’s goal is to improve the use of indicators by promoting standard, reusable indicators alongside guidance to help users effectively plan and collect useful data for their projects.
 
+## Interested in contributing?
+
+See our tasks list: https://github.com/toladata-ce/indicator-library/projects/1
+
 ## Install
 
 Here are the steps to create tables in PostgreSQL
