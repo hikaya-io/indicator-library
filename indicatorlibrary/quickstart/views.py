@@ -29,13 +29,12 @@ def signup(request):
         form = SignUpForm()
     return render(request, 'quickstart/signup_form.html', {'form': form})
 
-def view_profile(request, pk=None):
-    if pk:
-        user = User.objects.get(pk=pk)
-    else:
-        user = request.user
-    args = {'user': user}
+def view_profile(request):
+    args = {'user': request.user}
     return render(request, 'quickstart/Profile.html', args)
+
+def about(request):
+    return render(request, 'quickstart/about.html')
 
 
 class UserViewSet(viewsets.ModelViewSet):
