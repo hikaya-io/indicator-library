@@ -2,14 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3f68546d-552d-450a-b2c5-84fa0f403a6f" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/indicatorlibrary/quickstart/templates/quickstart/about.html" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/indicatorlibrary/quickstart/models.py" afterPath="$PROJECT_DIR$/indicatorlibrary/quickstart/models.py" />
       <change beforePath="$PROJECT_DIR$/indicatorlibrary/quickstart/templates/base.html" afterPath="$PROJECT_DIR$/indicatorlibrary/quickstart/templates/base.html" />
-      <change beforePath="$PROJECT_DIR$/indicatorlibrary/quickstart/templates/quickstart/Profile.html" afterPath="$PROJECT_DIR$/indicatorlibrary/quickstart/templates/quickstart/Profile.html" />
-      <change beforePath="$PROJECT_DIR$/indicatorlibrary/quickstart/templates/quickstart/login.html" afterPath="$PROJECT_DIR$/indicatorlibrary/quickstart/templates/quickstart/login.html" />
-      <change beforePath="$PROJECT_DIR$/indicatorlibrary/quickstart/views.py" afterPath="$PROJECT_DIR$/indicatorlibrary/quickstart/views.py" />
-      <change beforePath="$PROJECT_DIR$/indicatorlibrary/urls.py" afterPath="$PROJECT_DIR$/indicatorlibrary/urls.py" />
+      <change beforePath="$PROJECT_DIR$/indicatorlibrary/quickstart/templates/quickstart/about.html" afterPath="$PROJECT_DIR$/indicatorlibrary/quickstart/templates/quickstart/about.html" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -36,11 +30,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="about.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="about.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/indicatorlibrary/quickstart/templates/quickstart/about.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="36">
-              <caret line="2" column="4" lean-forward="false" selection-start-line="2" selection-start-column="4" selection-end-line="2" selection-end-column="4" />
+            <state relative-caret-position="144">
+              <caret line="5" column="14" lean-forward="true" selection-start-line="5" selection-start-column="14" selection-end-line="5" selection-end-column="14" />
               <folding />
             </state>
           </provider>
@@ -98,11 +92,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="base.html" pinned="false" current-in-tab="false">
+      <file leaf-file-name="base.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/indicatorlibrary/quickstart/templates/base.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="233">
-              <caret line="37" column="36" lean-forward="false" selection-start-line="37" selection-start-column="36" selection-end-line="37" selection-end-column="36" />
+            <state relative-caret-position="0">
+              <caret line="15" column="45" lean-forward="true" selection-start-line="15" selection-start-column="45" selection-end-line="15" selection-end-column="45" />
               <folding />
             </state>
           </provider>
@@ -112,7 +106,7 @@
         <entry file="file://$PROJECT_DIR$/indicatorlibrary/quickstart/forms.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="738">
-              <caret line="41" column="23" lean-forward="true" selection-start-line="41" selection-start-column="23" selection-end-line="41" selection-end-column="23" />
+              <caret line="41" column="23" lean-forward="false" selection-start-line="41" selection-start-column="23" selection-end-line="41" selection-end-column="23" />
               <folding>
                 <element signature="e#0#49#0" expanded="true" />
                 <marker date="1534863084230" expanded="true" signature="1713:1823" ph="..." />
@@ -153,6 +147,7 @@
       <find>unit</find>
       <find>direc</find>
       <find>UserProfile</find>
+      <find>togg</find>
     </findStrings>
     <replaceStrings>
       <replace>Source</replace>
@@ -193,11 +188,11 @@
         <option value="$PROJECT_DIR$/indicatorlibrary/quickstart/forms.py" />
         <option value="$PROJECT_DIR$/indicatorlibrary/quickstart/models.py" />
         <option value="$PROJECT_DIR$/indicatorlibrary/quickstart/templates/quickstart/Profile.html" />
-        <option value="$PROJECT_DIR$/indicatorlibrary/quickstart/templates/base.html" />
         <option value="$PROJECT_DIR$/indicatorlibrary/quickstart/views.py" />
         <option value="$PROJECT_DIR$/indicatorlibrary/urls.py" />
         <option value="$PROJECT_DIR$/indicatorlibrary/quickstart/templates/quickstart/login.html" />
         <option value="$PROJECT_DIR$/indicatorlibrary/quickstart/templates/quickstart/about.html" />
+        <option value="$PROJECT_DIR$/indicatorlibrary/quickstart/templates/base.html" />
       </list>
     </option>
   </component>
@@ -254,14 +249,6 @@
               <item name="indicatorlibrary" type="462c0819:PsiDirectoryNode" />
               <item name="quickstart" type="462c0819:PsiDirectoryNode" />
               <item name="templates" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="indicator-library" type="b2602c69:ProjectViewProjectNode" />
-              <item name="indicator-library" type="462c0819:PsiDirectoryNode" />
-              <item name="indicatorlibrary" type="462c0819:PsiDirectoryNode" />
-              <item name="quickstart" type="462c0819:PsiDirectoryNode" />
-              <item name="templates" type="462c0819:PsiDirectoryNode" />
-              <item name="quickstart" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="indicator-library" type="b2602c69:ProjectViewProjectNode" />
@@ -370,7 +357,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="65" y="-4" width="1855" height="1084" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.41884816" sideWeight="0.4145937" order="7" side_tool="true" content_ui="tabs" />
@@ -378,7 +364,7 @@
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32879582" sideWeight="0.49806523" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32879582" sideWeight="0.49806523" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.41884816" sideWeight="0.5854063" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20176893" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20176893" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -423,7 +409,7 @@
         <state relative-caret-position="522">
           <caret line="31" column="112" lean-forward="false" selection-start-line="31" selection-start-column="112" selection-end-line="31" selection-end-column="112" />
           <folding>
-            <element signature="e#0#28#0" expanded="true" />
+            <element signature="e#0#28#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -672,7 +658,7 @@
         <state relative-caret-position="306">
           <caret line="29" column="23" lean-forward="false" selection-start-line="29" selection-start-column="23" selection-end-line="29" selection-end-column="23" />
           <folding>
-            <element signature="e#0#28#0" expanded="true" />
+            <element signature="e#0#28#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -688,7 +674,7 @@
     <entry file="file://$PROJECT_DIR$/indicatorlibrary/quickstart/forms.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="738">
-          <caret line="41" column="23" lean-forward="true" selection-start-line="41" selection-start-column="23" selection-end-line="41" selection-end-column="23" />
+          <caret line="41" column="23" lean-forward="false" selection-start-line="41" selection-start-column="23" selection-end-line="41" selection-end-column="23" />
           <folding>
             <element signature="e#0#49#0" expanded="true" />
             <marker date="1534863084230" expanded="true" signature="1713:1823" ph="..." />
@@ -708,14 +694,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="72">
           <caret line="4" column="35" lean-forward="false" selection-start-line="4" selection-start-column="35" selection-end-line="4" selection-end-column="35" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/indicatorlibrary/quickstart/templates/base.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="233">
-          <caret line="37" column="36" lean-forward="false" selection-start-line="37" selection-start-column="36" selection-end-line="37" selection-end-column="36" />
           <folding />
         </state>
       </provider>
@@ -756,8 +734,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/indicatorlibrary/quickstart/templates/quickstart/about.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="36">
-          <caret line="2" column="4" lean-forward="false" selection-start-line="2" selection-start-column="4" selection-end-line="2" selection-end-column="4" />
+        <state relative-caret-position="144">
+          <caret line="5" column="14" lean-forward="true" selection-start-line="5" selection-start-column="14" selection-end-line="5" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/indicatorlibrary/quickstart/templates/base.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="15" column="45" lean-forward="true" selection-start-line="15" selection-start-column="45" selection-end-line="15" selection-end-column="45" />
           <folding />
         </state>
       </provider>
