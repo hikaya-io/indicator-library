@@ -1,8 +1,9 @@
 {% extends 'base.html' %}
 {% block content %}
-
-<p>Username: {{ user }}</p>
+    <div class="container-fluid">
+    <h2>User Profile</h2>
+    <p>Username: {{ user }}</p>
     <p>Email : {{ user.email }}</p>
-
-
+    <p>First name: {{ user.first_name }}</p>
+    </div>
 {% endblock %}

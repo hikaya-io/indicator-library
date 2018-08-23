@@ -38,5 +38,6 @@ urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^signup/$', views.signup, name='signup'),
     url(r'^profile/$', views.view_profile, name='view_profile'),
-    url(r'^about/$', views.about, name='about')
+    url(r'^about/$', views.about, name='about'),
+    url(r'^add/$', views.add_indicator, name='add')
 ]
