@@ -25,6 +25,7 @@ SECRET_KEY = '=tg2x0!e#9@)0jgl1wgi8g*b=aw^ogd6d3k%9mplnna%v3+wn='
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
+STATIC_ROOT = "static"
 ALLOWED_HOSTS = ['127.0.0.1', '.herokuapp.com']
 STATIC_URL = "/static/"
 STATICFILES_DIRS = (
@@ -72,7 +73,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'indicatorlibrary.wsgi.application'
+#WSGI_APPLICATION = 'wsgi.application'
 
 
 # Database
