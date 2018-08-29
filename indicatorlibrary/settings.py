@@ -27,7 +27,7 @@ SECRET_KEY = '=tg2x0!e#9@)0jgl1wgi8g*b=aw^ogd6d3k%9mplnna%v3+wn='
 
 PROJECT_ROOT = os.path.dirname(os.path.abspath(__file__))
 
-STATICFILES_STORAGE = 'whitenoise.django.GzipManifestStaticFilesStorage'
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 STATIC_ROOT = os.path.join(PROJECT_ROOT, 'staticfiles')
 
