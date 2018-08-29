@@ -8,7 +8,7 @@ from .filters import IndicatorFilter
 from django.shortcuts import render,redirect
 from django.db import transaction
 from django.contrib.auth.decorators import login_required
-from .forms import SignUpForm
+from .forms import SignUpForm, IndicatorAddForm
 from django.contrib.auth import login, authenticate
 from django.contrib.auth.models import User
 
@@ -36,6 +36,10 @@ def view_profile(request):
 def about(request):
     return render(request, 'quickstart/about.html')
 
+def add_indicator(request):
+    form  = IndicatorAddForm
+    form.save(request)
+    return render(request, 'quickstart/add_indicator.html', {'form': form})
 
 class UserViewSet(viewsets.ModelViewSet):
     """
