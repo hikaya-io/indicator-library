@@ -39,7 +39,7 @@ STATICFILES_DIRS = (
         os.path.join(BASE_DIR, 'static'),
 )
 
-DEBUG = False
+DEBUG = True
 # Application definition
 
 INSTALLED_APPS = [
