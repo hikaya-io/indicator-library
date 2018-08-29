@@ -28,7 +28,7 @@ DEBUG = True
 PROJECT_ROOT = os.path.dirname(os.path.abspath(__file__))
 STATICFILES_STORAGE = 'whitenoise.django.GzipManifestStaticFilesStorage'
 STATIC_ROOT = os.path.join(PROJECT_ROOT, 'staticfiles')
-# ALLOWED_HOSTS = ['127.0.0.1', '.herokuapp.com']
+ALLOWED_HOSTS = ['127.0.0.1', 'indilib.herokuapp.com']
 STATIC_URL = "/static/"
 STATICFILES_DIRS = (
         os.path.join(BASE_DIR, 'static'),
