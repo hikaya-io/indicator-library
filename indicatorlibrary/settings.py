@@ -24,15 +24,22 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = '=tg2x0!e#9@)0jgl1wgi8g*b=aw^ogd6d3k%9mplnna%v3+wn='
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+
 PROJECT_ROOT = os.path.dirname(os.path.abspath(__file__))
+
 STATICFILES_STORAGE = 'whitenoise.django.GzipManifestStaticFilesStorage'
+
 STATIC_ROOT = os.path.join(PROJECT_ROOT, 'staticfiles')
+
 ALLOWED_HOSTS = ['127.0.0.1', 'indilib.herokuapp.com']
+
 STATIC_URL = "/static/"
+
 STATICFILES_DIRS = (
         os.path.join(BASE_DIR, 'static'),
 )
+
+DEBUG = False
 # Application definition
 
 INSTALLED_APPS = [
@@ -75,7 +82,7 @@ TEMPLATES = [
     },
 ]
 
-#WSGI_APPLICATION = 'wsgi.application'
+#WSGI_APPLICATION = 'indicatorlibrary.wsgi.application'
 
 
 # Database
@@ -128,6 +135,8 @@ USE_TZ = True
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.11/howto/static-files/
+db_from_env = dj_database_url.config(conn_max_age=500)
+DATABASES['default'].update(db_from_env)
 
 
 
