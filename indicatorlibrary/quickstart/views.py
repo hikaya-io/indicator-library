@@ -38,7 +38,6 @@ def about(request):
 
 def add_indicator(request):
     form  = IndicatorAddForm
-    form.save(request)
     return render(request, 'quickstart/add_indicator.html', {'form': form})
 
 class UserViewSet(viewsets.ModelViewSet):
