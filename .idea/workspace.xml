@@ -32,8 +32,8 @@
       <file leaf-file-name="indicator_detail.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/indicatorlibrary/quickstart/templates/quickstart/indicator_detail.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="486">
-              <caret line="35" column="18" lean-forward="false" selection-start-line="35" selection-start-column="18" selection-end-line="35" selection-end-column="18" />
+            <state relative-caret-position="504">
+              <caret line="35" column="140" lean-forward="false" selection-start-line="35" selection-start-column="140" selection-end-line="35" selection-end-column="140" />
               <folding />
             </state>
           </provider>
@@ -777,8 +777,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/indicatorlibrary/quickstart/templates/quickstart/indicator_detail.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="486">
-          <caret line="35" column="18" lean-forward="false" selection-start-line="35" selection-start-column="18" selection-end-line="35" selection-end-column="18" />
+        <state relative-caret-position="504">
+          <caret line="35" column="140" lean-forward="false" selection-start-line="35" selection-start-column="140" selection-end-line="35" selection-end-column="140" />
           <folding />
         </state>
       </provider>
