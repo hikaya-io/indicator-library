@@ -6,7 +6,8 @@ from django.db.models.signals import post_save
 from django.dispatch import receiver
 # Create your models here.    created_by = models.ForeignKey('auth.User', related_name='indicators', null=True, blank=True, on_delete=models.SET_NULL)
 
-
+# The first one is user extended model
+# TODO: make many to many relations in indicator frequqncy source and sector
 
 class Profile(models.Model):
     user = models.OneToOneField(User, on_delete=models.CASCADE)
@@ -70,7 +71,7 @@ class Indicator(models.Model):
     disaggregation = models.TextField(max_length=500, blank=True)
     direction_of_change = models.TextField(max_length=500, null=True, blank=True, verbose_name="Direction of Change")
     baseline = models.TextField(max_length=500, null=True, blank=True)
-    lop_target = models.IntegerField("LOP Target",default=0, blank=True)
+    lop_target = models.IntegerField("LOP Target", default=0, blank=True)
     rationale_for_target = models.TextField(max_length=500, null=True, blank=True)
     means_of_verification = models.TextField(max_length=500, null=True, blank=True, verbose_name="Means of Verification")
     question_format = models.TextField(max_length=500, null=True, blank=True, verbose_name="Question Format")

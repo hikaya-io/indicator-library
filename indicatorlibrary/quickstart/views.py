@@ -13,7 +13,7 @@ from django.contrib.auth import login, authenticate
 from django.contrib.auth.models import User
 
 
-
+# Signup form
 def signup(request):
     if request.method == 'POST':
         form = SignUpForm(request.POST)
@@ -29,16 +29,21 @@ def signup(request):
         form = SignUpForm()
     return render(request, 'quickstart/signup_form.html', {'form': form})
 
+# View profile for user
 def view_profile(request):
     args = {'user': request.user}
     return render(request, 'quickstart/Profile.html', args)
 
+# About description about the website
 def about(request):
     return render(request, 'quickstart/about.html')
 
+
+# Indicator addition form
 def add_indicator(request):
     form  = IndicatorAddForm
     return render(request, 'quickstart/add_indicator.html', {'form': form})
+
 
 class UserViewSet(viewsets.ModelViewSet):
     """
@@ -83,13 +88,15 @@ class AdditionalFieldsViewSet(viewsets.ModelViewSet):
     queryset = AdditionalFields.objects.all()
     serializer_class = AdditionalFieldsSerializer
 
+# List of indicators
+# class IndexView(generic.ListView): # class for indexing and filtering the indicators
+#     model = Indicator
+#     template_name = "quickstart/index.html"
+#     def get_queryset(self):
+#         return Indicator.objects.filter(level__startswith ="Outcome")
+#
 
-class IndexView(generic.ListView): # class for indexing and filtering the indicators
-    model = Indicator
-    template_name = "quickstart/index.html"
-    def get_queryset(self):
-        return Indicator.objects.filter(level__startswith ="Outcome")
-
+# Detail view for the indicator
 class IndicatorDetailView(generic.DetailView):
     model = Indicator
     paginate_by = 10
@@ -98,5 +105,6 @@ class IndicatorDetailView(generic.DetailView):
 def search(request):
     indi_list = Indicator.objects.all()
     indi_filter = IndicatorFilter(request.GET, queryset = indi_list)
+    paginate_by = 10
     return render(request, 'quickstart/indilist.html', {'filter': indi_filter})
 
