@@ -1,7 +1,7 @@
 from django_filters import FilterSet, ModelChoiceFilter, ChoiceFilter
 from .models import Indicator
 
-
+# Using django filters for easy filtering than ORM add field in level or sector for more
 STATUS_CHOICES_LEVEL = (
     ('Goal','Goal'),
     ('Outcome','Outcome'),

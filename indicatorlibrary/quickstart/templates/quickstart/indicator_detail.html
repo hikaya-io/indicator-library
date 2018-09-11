@@ -2,7 +2,7 @@
 
 {% block content %}
 
-  <h1 style="colour: #9cff9e; font-size:32px">{{ indicator.name }}</h1>
+    <h1 style="colour: #9cff9e; font-size:32px">{{ indicator.name }}</h1>
 
     <p><strong>Level:</strong> <a href="">{{ indicator.level }}</a></p> <!-- author detail link not yet defined -->
     <p><strong>Sector:</strong> {{ indicator.sector }}</p>
@@ -33,7 +33,7 @@
     <p><strong>Information Use:</strong> {{ indicator.information_use}}</p>
     <p><strong>Quality Assurance:</strong> {{ indicator.quality_assurance}}</p>
     <p><strong>Data issues:</strong> {{ indicator.data_issues}}</p>
-    <a href="http://127.0.0.1:8000/indicator/{{ indicator.id}}/?format=json"><strong>Json API:</strong> http://127.0.0.1:8000/indicator/{{ indicator.id}}/?format=json</a>
+    <a href="http://indilib.herokuapp.com/indicator/{{ indicator.id}}/?format=json"><strong>Json API:</strong> http://indilib.herokuapp.com/indicator/{{ indicator.id}}/?format=json</a>
 
 
 

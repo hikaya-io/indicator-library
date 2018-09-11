@@ -14,7 +14,8 @@ import os
 import dj_database_url
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-
+# import django_heroku
+# django_heroku.settings(locals())
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/1.11/howto/deployment/checklist/
@@ -23,13 +24,22 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = '=tg2x0!e#9@)0jgl1wgi8g*b=aw^ogd6d3k%9mplnna%v3+wn='
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
 
-ALLOWED_HOSTS = ['127.0.0.1', '.herokuapp.com']
+PROJECT_ROOT = os.path.dirname(os.path.abspath(__file__))
+
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+
+STATIC_ROOT = os.path.join(PROJECT_ROOT, 'staticfiles')
+
+ALLOWED_HOSTS = ['127.0.0.1', 'indilib.herokuapp.com']
+
 STATIC_URL = "/static/"
+
 STATICFILES_DIRS = (
         os.path.join(BASE_DIR, 'static'),
 )
+
+DEBUG = True
 # Application definition
 
 INSTALLED_APPS = [
@@ -72,7 +82,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'indicatorlibrary.wsgi.application'
+#WSGI_APPLICATION = 'indicatorlibrary.wsgi.application'
 
 
 # Database
@@ -125,10 +135,8 @@ USE_TZ = True
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.11/howto/static-files/
-
-STATIC_URL = '/static/'
-
-
-
 db_from_env = dj_database_url.config(conn_max_age=500)
 DATABASES['default'].update(db_from_env)
+
+
+

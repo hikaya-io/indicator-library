@@ -1,36 +1,36 @@
 {% extends 'base.html' %}
 
-      {% block content %}
+{% block content %}
 
 
-  <form method="get">
-    {{ filter.form.as_p }}
-    <button type="submit" class="btn btn-secondary">Search</button>
-  </form>
-          <table class="table">
-  <thead>
-    <tr>
-        <th scope="col">#</th>
-      <th scope="col">Indicator ID</th>
-      <th scope="col">Name</th>
-      <th scope="col">Level</th>
-      <th scope="col">Sector</th>
-        <th scope="col">JSON API</th>
-    </tr>
-  </thead>
-  <tbody>
+    <form method="get">
+        {{ filter.form.as_p }}
+        <button type="submit" class="btn btn-secondary">Search</button>
+    </form>
+    <table class="table">
+        <thead>
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">Indicator ID</th>
+            <th scope="col">Name</th>
+            <th scope="col">Level</th>
+            <th scope="col">Sector</th>
+            <th scope="col">JSON API</th>
+        </tr>
+        </thead>
+        <tbody>
 
-  {% for indicator in filter.qs %}
-    <td>
-      <th scope="row">{{ indicator.id }}</th>
-      <td> <a href="{{indicator.id}} ">{{indicator.name}}</a></td>
-      <td>{{indicator.level}}</td>
-      <td>{{indicator.sector}}</td>
-      <td><a href="http://127.0.0.1:8000/indicator/{{ indicator.id}}/?format=json"><strong>Json API:</strong> http://127.0.0.1:8000/indicator/{{ indicator.id}}/?format=json</a></td>
-    </tr>
+        {% for indicator in filter.qs %}
+            <td>
+            <th scope="row">{{ indicator.id }}</th>
+            <td> <a href="{{indicator.id}} ">{{indicator.name}}</a></td>
+            <td>{{indicator.level}}</td>
+            <td>{{indicator.sector}}</td>
+            <td><a href="http://indilib.herokuapp.com/indicator/{{ indicator.id}}/?format=json"><strong>Json API:</strong> http://indilib.herokuapp.com/indicator/{{ indicator.id}}/?format=json</a></td>
+            </tr>
 
-{% endfor %}
-      </tbody>
-</table>
+        {% endfor %}
+        </tbody>
+    </table>
 
 {% endblock %}
