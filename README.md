@@ -21,6 +21,8 @@ Here are the steps to create tables in PostgreSQL
       * Confirm python --version (3.6.4)
      
 2. Run Django Application:
+
+      python manage.py runserver
       * Install django with ͞pip install django͟. 
       * Verify version 2.0.2 with django-admin –version
       * pip install psycopg2  (2.7.4)
@@ -42,3 +44,5 @@ Here are the steps to create tables in PostgreSQL
             django_content_type             
             django_migrations  
             django_session     
+## For dev and Tola team
+* run scripts/Csvtomodel.py file with the clean dataset provided in the django shell(python manage.py shell)
