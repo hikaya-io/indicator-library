@@ -6,7 +6,7 @@ Django==2.0.2
 django-adaptors==0.2.5
 django-extensions==2.0.7
 django-filter==2.0.0
-djangorestframework==3.8.2
+djangorestframework==3.9.1
 gunicorn==19.9.0
 idna==2.7
 mccabe==0.6.1
