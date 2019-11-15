@@ -3,7 +3,16 @@ import os
 import sys
 
 if __name__ == "__main__":
-    os.environ.setdefault("DJANGO_SETTINGS_MODULE", "indicatorlibrary.settings")
+
+    app_debug_mode = os.environ.get('INDICATOR_LIB_DEBUG', None)
+    if app_debug_mode is False and app_debug_mode is not None:
+        settings = 'indicatorlibrary.settings.production'
+
+    else:
+        settings = 'indicatorlibrary.settings.local'
+
+    os.environ.setdefault('DJANGO_SETTINGS_MODULE', settings)
+
     try:
         from django.core.management import execute_from_command_line
     except ImportError:

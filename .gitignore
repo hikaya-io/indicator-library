@@ -7,3 +7,5 @@ __pycache__/
 venv/
 .history/
 .idea/workspace.xml
+db
+local.py

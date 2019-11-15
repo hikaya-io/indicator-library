@@ -82,7 +82,7 @@ TEMPLATES = [
     },
 ]
 
-#WSGI_APPLICATION = 'indicatorlibrary.wsgi.application'
+# WSGI_APPLICATION = 'indicatorlibrary.wsgi.application'
 
 
 # Database
@@ -90,11 +90,11 @@ TEMPLATES = [
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'inddb',
-        'USER': 'indlib',
-        'PASSWORD': 'ind',
-        'HOST': '127.0.0.1',
+        'ENGINE': 'django.db.backends.postgresql',  # django.db.backends.sqlite3
+        'NAME': '',
+        'USER': '',
+        'PASSWORD': '',
+        'HOST': '',
         'PORT': '',
     }
 }

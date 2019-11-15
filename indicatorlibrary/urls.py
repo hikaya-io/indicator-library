@@ -29,9 +29,9 @@ router.register(r'additional_fields', views.AdditionalFieldsViewSet)
 # Wire up our API using automatic URL routing.
 # Additionally, we include login URLs for the browsable API.
 urlpatterns = [
-    url(r'^', include(router.urls)),
+    url(r'^router', include(router.urls)),
     url(r'^api-auth/', include('rest_framework.urls', namespace='rest_framework')),
-    url(r'^catalog/$', views.search, name = 'catalog'),
+    url(r'^$', views.search, name = 'catalog'),
     url(r'^catalog/(?P<pk>\d+)$', views.IndicatorDetailView.as_view(), name='Indicator-view'),
     url(r'^admin/', admin.site.urls),
     url(r'^signup/$', views.signup, name='signup'),
