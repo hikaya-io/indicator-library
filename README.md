@@ -43,6 +43,7 @@ Here are the steps to create tables in PostgreSQL
             django_admin_log           
             django_content_type             
             django_migrations  
-            django_session     
-## For dev and Tola team
+            django_session
+            
+## For dev team
 * run scripts/Csvtomodel.py file with the clean dataset provided in the django shell(python manage.py shell)
