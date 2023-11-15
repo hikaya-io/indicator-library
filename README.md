@@ -2,13 +2,13 @@
 
 ## Background
 
-TolaData is supporting an open source project called the Indicator Library, which started as an exercise to collect and compile nearly 2,500 commonly used indicators used by NGOs and donors in the international development and humanitarian sector as well as to include indicators used for corporate reporting on the SDGs. 
+The Indicator Library originated as an initiative to gather and organize approximately 2,500 frequently utilized indicators employed by NGOs and donors in the international development and humanitarian sector. This also encompasses indicators utilized in corporate reporting on the Sustainable Development Goals (SDGs).
 
-The project’s goal is to improve the use of indicators by promoting standard, reusable indicators alongside guidance to help users effectively plan and collect useful data for their projects.
+The primary objective of the project is to enhance the utilization of indicators. It aims to achieve this by advocating for standard, reusable indicators and providing guidance to assist users in efficiently planning and collecting valuable data for their projects.
 
 ## Interested in contributing?
 
-See our tasks list: https://github.com/toladata-ce/indicator-library/projects/1
+Create an issue and we'll get in touch.
 
 ## Install
 
